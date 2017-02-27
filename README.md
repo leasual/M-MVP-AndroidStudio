@@ -7,32 +7,33 @@
 
 ### M-MVP Achitecture:
 Here's the hierarchy it follows:
-  com.company.app
-	+-- base
-    |   - BaseActivity
-    |	- BaseAdapter
-   	|	- BaseFragment
-   	|	- BasePresenter
-   	|	- BaseView
-   	|	- BindingViewHolder
-   	|	- DataBindingActivity
-   	|	- DataBindingFragment
-    +-- data
-    |   + model
-    |   + request
-    |   - response
-    +-- receiver
-    +-- service
-    +-- ui
-    |	+common
-    |		+adapter
-    |    	+view
-    |		+contract
-    |		+presenter
-    |   +...
-    +-- utils
-    +-- widget
-    | - YourApplication
+
+com.company.app</br>
+    |&emsp;&emsp;+-- base</br>
+    |&emsp;&emsp;&emsp;&emsp;       |	- BaseActivity</br>
+    |&emsp;&emsp;&emsp;&emsp;	    |	- BaseAdapter</br>
+    |&emsp;&emsp;&emsp;&emsp;   	|	- BaseFragment</br>
+    |&emsp;&emsp;&emsp;&emsp;   	|	- BasePresenter</br>
+    |&emsp;&emsp;&emsp;&emsp;   	|	- BaseView</br>
+    |&emsp;&emsp;&emsp;&emsp;   	|	- BindingViewHolder</br>
+    |&emsp;&emsp;&emsp;&emsp;   	|	- DataBindingActivity</br>
+    |&emsp;&emsp;&emsp;&emsp;   	|	- DataBindingFragment</br>
+    |&emsp;&emsp;+-- data</br>
+    |&emsp;&emsp;&emsp;&emsp;    |	+ model</br>
+	|&emsp;&emsp;&emsp;&emsp;    |	+ request</br>
+	|&emsp;&emsp;&emsp;&emsp;    |  + response</br>
+    |&emsp;&emsp;+-- receiver</br>
+	|&emsp;&emsp;+-- service</br>
+	|&emsp;&emsp;+-- ui</br>
+    |&emsp;&emsp;&emsp;&emsp;	|	+common</br>
+	|&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;	    |	+adapter</br>
+    |&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;	    |   +view</br>
+	|&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;    	|	+contract</br>
+	|&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;    	|	+presenter</br>
+	|&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;    	|   	+...</br>
+	|&emsp;&emsp;+-- utils</br>
+	|&emsp;&emsp;+-- widget</br>
+	|&emsp;&emsp;| - YourApplication</br>
 
 
 ### Installation
