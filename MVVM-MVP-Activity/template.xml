@@ -55,7 +55,7 @@
         type="string"
         constraints="class|nonempty|unique"
         default="MainContract"
-        suggest="${underscoreToCamelCase(classToResource(activityClass))}View"
+        suggest="${underscoreToCamelCase(classToResource(activityClass))}Contract"
         help="The name of the View to create" />
 
     <parameter

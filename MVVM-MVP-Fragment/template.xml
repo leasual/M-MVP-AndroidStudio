@@ -48,7 +48,7 @@
         type="string"
         constraints="class|nonempty|unique"
         default="CustomContract"
-        suggest="${underscoreToCamelCase(classToResource(fragmentClass))}View"
+        suggest="${underscoreToCamelCase(classToResource(fragmentClass))}Contract"
         help="The name of the View to create" />
 
     <parameter

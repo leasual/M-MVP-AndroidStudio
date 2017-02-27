@@ -10,7 +10,7 @@
 
     <mkdir at="${escapeXmlAttribute(srcOut)}/data" />
     
-    <mkdir at="${escapeXmlAttribute(srcOut)}/data/mode" />
+    <mkdir at="${escapeXmlAttribute(srcOut)}/data/model" />
     
     <mkdir at="${escapeXmlAttribute(srcOut)}/data/request" />
 
