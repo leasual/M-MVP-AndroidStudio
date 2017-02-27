@@ -1,18 +1,16 @@
-you should do next steps first when you develop:
-1. In your module's build.gradle
-android {
-	dataBinding {
-        enabled = true
-    }
-}
 
-dependencies {
-	compile('com.squareup.retrofit2:retrofit:2.1.0') {
-        exclude module: 'okhttp'
-    }
-}
-
-
+While using BaseAdapter remember to:
+1.	Open binding item line.
+	//when recycler view adapter ,it should open
+    holder.getDataBinding().setVariable(${packageName}.BR.item, item); 
+    
+2.  Add <data> In layout.xml.Just like this:
+	<data>
+        <variable
+            name="item"
+            type="your model">
+        </variable>
+    </data>
 
 While using butterknife remember to:
 1. In Project: build.gradle:

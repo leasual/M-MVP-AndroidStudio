@@ -39,7 +39,8 @@ public abstract class BaseAdapter<T> extends  RecyclerView.Adapter<BindingViewHo
     @Override
     public void onBindViewHolder(BindingViewHolder holder, int position) {
         T item = mDataList.get(position);
-        holder.getDataBinding().setVariable(com.wesoft.databindtest.BR.item, item);
+        //when recycler view adapter ,it should open
+        //holder.getDataBinding().setVariable(${packageName}.BR.item, item);
         holder.getDataBinding().executePendingBindings();
     }
 

@@ -1,6 +1,10 @@
 <?xml version="1.0"?>
 <recipe>
-	<#include "../common/recipe_manifest.xml.ftl" />
+	<merge from="root/res/AndroidManifest.xml.ftl"
+             to="${escapeXmlAttribute(manifestOut)}/AndroidManifest.xml" />
+             
+    <merge from="root/res/values/manifest_strings.xml.ftl"
+             to="${escapeXmlAttribute(resOut)}/values/strings.xml" />
 	
 	<mkdir at="${escapeXmlAttribute(srcOut)}/base" />
 
@@ -35,9 +39,13 @@
     <mkdir at="${escapeXmlAttribute(srcOut)}/utils" />
 
 <#if generateLayout>
-    <#include "../common/recipe_simple.xml.ftl" />
+    <instantiate from="root/res/layout/simple.xml.ftl"
+                 	to="${escapeXmlAttribute(resOut)}/layout/${simpleLayoutName}.xml" />
 </#if>
 
+	<instantiate from="root/src/app_package/App.java.ftl"
+                   to="${escapeXmlAttribute(srcOut)}/${applicationClass}.java" />
+                   
 	<instantiate from="root/src/app_package/base/BaseActivity.java.ftl"
                    to="${escapeXmlAttribute(srcOut)}/base/BaseActivity.java" />
 
@@ -63,31 +71,31 @@
        			   to="${escapeXmlAttribute(srcOut)}/base/DataBindingFragment.java" /> 
 
 	<instantiate from="root/src/app_package/SimpleActivity.java.ftl"
-                   to="${escapeXmlAttribute(srcOut)}/ui/common/view/${activityClass}.java" />
+                   to="${escapeXmlAttribute(srcOut)}/${slashedPackageName(moduleName)}/view/${activityClass}.java" />
 
-    <open file="${escapeXmlAttribute(srcOut)}/ui/common/view/${activityClass}.java" />
+    <open file="${escapeXmlAttribute(srcOut)}/${slashedPackageName(moduleName)}/view/${activityClass}.java" />
 
     <instantiate from="root/src/app_package/SimpleContract.java.ftl"
-                   to="${escapeXmlAttribute(srcOut)}/ui/common/contract/${contractClass}.java" />
+                   to="${escapeXmlAttribute(srcOut)}/${slashedPackageName(moduleName)}/contract/${contractClass}.java" />
 
-    <open file="${escapeXmlAttribute(srcOut)}/ui/common/contract/${contractClass}.java" />
+    <open file="${escapeXmlAttribute(srcOut)}/${slashedPackageName(moduleName)}/contract/${contractClass}.java" />
 
     <instantiate from="root/src/app_package/SimplePresenter.java.ftl"
-                   to="${escapeXmlAttribute(srcOut)}/ui/common/presenter/${presenterClass}.java" />
+                   to="${escapeXmlAttribute(srcOut)}/${slashedPackageName(moduleName)}/presenter/${presenterClass}.java" />
 
-    <open file="${escapeXmlAttribute(srcOut)}/ui/common/presenter/${presenterClass}.java" />
+    <open file="${escapeXmlAttribute(srcOut)}/${slashedPackageName(moduleName)}/presenter/${presenterClass}.java" />
 	
 	<instantiate from="root/src/app_package/MVPReadMe.txt.ftl"
                    to="${escapeXmlAttribute(srcOut)}/MVPReadMe.txt" />
 				   
 	<open file="${escapeXmlAttribute(srcOut)}/MVPReadMe.txt" />
 	
-	
+	<merge from="root/src/build.gradle.ftl" to="${projectOut}/build.gradle" />
+             
 <#if retrofit>
+	<dependency mavenUrl="com.android.support:appcompat-v7:${buildApi}.+"/>
+	<dependency mavenUrl="com.android.support:design:${buildApi}.+"/>
 
-	<dependency mavenUrl="com.android.support:appcompat-v7:23.4.0" />
-	<dependency mavenUrl="com.android.support:design:23.4.0" />
-	<dependency mavenUrl="com.squareup.retrofit2:retrofit:2.1.0"/>
 	<dependency mavenUrl="com.squareup.retrofit2:adapter-rxjava:2.1.0"/>
 	<dependency mavenUrl="com.squareup.retrofit2:converter-gson:2.1.0"/>
 	<dependency mavenUrl="com.google.code.gson:gson:2.8.0"/>

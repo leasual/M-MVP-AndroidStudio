@@ -16,7 +16,7 @@
         type="string"
         constraints="class|unique|nonempty"
         suggest="${layoutToActivity(layoutName)}"
-        default="MainActivity"
+        default="SplashActivity"
         help="The name of the activity class to create" />
 
     <parameter
@@ -32,7 +32,7 @@
         type="string"
         constraints="layout|unique|nonempty"
         suggest="${activityToLayout(activityClass)}"
-        default="activity_main"
+        default="activity_splash"
         visibility="generateLayout"
         help="The name of the layout to create for the activity" />
 		
@@ -43,13 +43,27 @@
 		constraints="class|unique|nonempty"
 		default="MyApplication"
 		help="The name of your custom Application class" />
+		
+	<parameter
+        id="packageName"
+        name="Package name"
+        type="string"
+        constraints="package"
+        default="com.mycompany.myapp" />
+    
+    <parameter
+        id="moduleName"
+        name="Module name"
+        type="string"
+        constraints="class|nonempty|unique"
+        default="ui.common" />
 
      <parameter
         id="presenterClass"
         name="Presenter Name"
         type="string"
         constraints="class|nonempty|unique"
-        default="MainPresenter"
+        default="SplashPresenter"
         suggest="${underscoreToCamelCase(classToResource(activityClass))}Presenter"
         help="The name of the Presenter to create" />
 
@@ -58,7 +72,7 @@
         name="Contract Name"
         type="string"
         constraints="class|nonempty|unique"
-        default="MainContract"
+        default="SplashContract"
         suggest="${underscoreToCamelCase(classToResource(activityClass))}Contract"
         help="The name of the Contract to create" />
 		
@@ -133,14 +147,7 @@
         default="false"
         help="If true, this activity will have a CATEGORY_LAUNCHER intent filter, making it visible in the launcher" />
     
-    <parameter
-        id="packageName"
-        name="Package name"
-        type="string"
-        constraints="package"
-        default="com.mycompany.myapp" />
-
-
+    
     <!-- 128x128 thumbnails relative to template.xml -->
     <thumbs>
         <!-- default thumbnail is required -->
