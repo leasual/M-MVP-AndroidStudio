@@ -38,7 +38,8 @@ com.company.app</br>
 
 ### Installation
 
-### Clone this repository to the following directory depending on your machine:
+### Clone this repository to the following directory depending on your machine:  
+#### copy MVVM-MVP-Activity, MVVM-MVP-Fragment, MVVM-MVP-Init three folders to:
 ### MacOS
 #### /Applications/Android Studio.app/Contents/plugins/android/lib/templates/activities/
 
@@ -46,3 +47,5 @@ com.company.app</br>
 #### C:/Users/<<username>>/AppData/Local/Android/android-studio/plugins/android/lib/templates/activities/
 
 ### Restart Android Studio
+### New a android project and select M-MVP-Init, that it will auto initialize this project with M-MVP Achitecture.
+### Enjoy it.
