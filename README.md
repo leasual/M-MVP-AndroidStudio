@@ -36,7 +36,7 @@ com.company.app</br>
 	|&emsp;&emsp;| - YourApplication</br>
 
 
-#### Installation
+### Installation
 
 #### Clone this repository to the following directory depending on your machine:  
 ##### copy MVVM-MVP-Activity, MVVM-MVP-Fragment, MVVM-MVP-Init three folders to:
