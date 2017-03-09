@@ -31,6 +31,10 @@
     <mkdir at="${escapeXmlAttribute(srcOut)}/ui/common/presenter" />
 
     <mkdir at="${escapeXmlAttribute(srcOut)}/ui/common/view" />
+    
+    <mkdir at="${escapeXmlAttribute(srcOut)}/network" />
+    
+    <mkdir at="${escapeXmlAttribute(srcOut)}/network/gson" />
 
     <mkdir at="${escapeXmlAttribute(srcOut)}/utils" />
     
@@ -69,6 +73,15 @@
 
     <instantiate from="root/src/app_package/base/DataBindingFragment.java.ftl"
        			   to="${escapeXmlAttribute(srcOut)}/base/DataBindingFragment.java" /> 
+       			   
+    <instantiate from="root/src/app_package/gson/NullStringToEmptyAdapterFactory.java.ftl"
+       			   to="${escapeXmlAttribute(srcOut)}/network/gson/NullStringToEmptyAdapterFactory.java" /> 
+    
+    <instantiate from="root/src/app_package/gson/StringAdapter.java.ftl"
+       			   to="${escapeXmlAttribute(srcOut)}/network/gson/StringAdapter.java" /> 
+    
+    <instantiate from="root/src/app_package/network/HttpService.java.ftl"
+       			   to="${escapeXmlAttribute(srcOut)}/network/HttpService.java" /> 
 
 	<instantiate from="root/src/app_package/SimpleActivity.java.ftl"
                    to="${escapeXmlAttribute(srcOut)}/${slashedPackageName(moduleName)}/view/${activityClass}.java" />
@@ -91,6 +104,8 @@
 	<open file="${escapeXmlAttribute(srcOut)}/MVPReadMe.txt" />
 	
 	<merge from="root/src/build.gradle.ftl" to="${projectOut}/build.gradle" />
+	
+	<merge from="root/build_apt.gradle.ftl" to="${topOut}/build.gradle" />
              
 <#if retrofit>
 	<dependency mavenUrl="com.android.support:appcompat-v7:${buildApi}.+"/>
