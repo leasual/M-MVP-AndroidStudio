@@ -4,12 +4,12 @@
              to="${escapeXmlAttribute(topOut)}/settings.gradle" />
                
     <instantiate from="root/build_annotation.gradle.ftl"
-                   to="${escapeXmlAttribute(annotationProjectOut)}/build.gradle" />
+                   to="${escapeXmlAttribute(topOut)}/annotation/build.gradle" />
     <instantiate from="root/src/library_package/ApiFactory.java.ftl"
-                   to="${escapeXmlAttribute(annotationSrcOut)}/ApiFactory.java" />
+                   to="${escapeXmlAttribute(topOut)}/annotation/${srcDir}/ApiFactory.java" />
 
     <copy from="root/gitignore"
-            to="${escapeXmlAttribute(annotationProjectOut)}/.gitignore" />
+            to="${escapeXmlAttribute(topOut)}/annotation/.gitignore" />
 
-	<mkdir at="${escapeXmlAttribute(annotationProjectOut)}/libs" />
+	<mkdir at="${escapeXmlAttribute(topOut)}/annotation/libs" />
 </recipe>

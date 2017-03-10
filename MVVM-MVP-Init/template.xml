@@ -157,10 +157,9 @@
     <globals file="globals.xml.ftl" />
     <execute file="recipe.xml.ftl" />
     
-    <globals file="library_annotation_globals.xml.ftl" />
+    
     <execute file="library_annotation_recipe.xml.ftl" />
     
-    <globals file="library_compiler_globals.xml.ftl" />
     <execute file="library_compiler_recipe.xml.ftl" />
 
 </template>
