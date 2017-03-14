@@ -27,7 +27,7 @@ public abstract class DataBindingFragment<T extends ViewDataBinding> extends Fra
 
     @Override
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
+        super.onActivityCreated(savedInstanceState);
         initPresenter();
         initUIViews();
     }
