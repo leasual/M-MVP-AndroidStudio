@@ -4,6 +4,6 @@ dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
 }
 
-sourceCompatibility = "1.8"
-targetCompatibility = "1.8"
+sourceCompatibility = "1.7"
+targetCompatibility = "1.7"
 

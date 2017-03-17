@@ -7,5 +7,5 @@ dependencies {
     compile project(path: ':annotation')
 }
 
-sourceCompatibility = "1.8"
-targetCompatibility = "1.8"
+sourceCompatibility = "1.7"
+targetCompatibility = "1.7"

@@ -20,7 +20,7 @@ import javax.lang.model.util.Elements;
  */ 
  
 @AutoService(Processor.class)//自动生成 javax.annotation.processing.IProcessor 文件
-@SupportedSourceVersion(SourceVersion.RELEASE_8)
+@SupportedSourceVersion(SourceVersion.RELEASE_7)
 @SupportedAnnotationTypes({//标注注解处理器支持的注解类型 
         "${packageName}.ApiFactory"
 })
