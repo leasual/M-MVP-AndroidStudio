@@ -83,6 +83,18 @@
     <instantiate from="root/src/app_package/network/HttpService.java.ftl"
        			   to="${escapeXmlAttribute(srcOut)}/network/HttpService.java" /> 
 
+    <instantiate from="root/src/app_package/network/BaseSubscriber.java.ftl"
+               to="${escapeXmlAttribute(srcOut)}/network/BaseSubscriber.java" /> 
+
+    <instantiate from="root/src/app_package/network/RxException.java.ftl"
+               to="${escapeXmlAttribute(srcOut)}/network/RxException.java" /> 
+
+    <instantiate from="root/src/app_package/utils/LogUtil.java.ftl"
+               to="${escapeXmlAttribute(srcOut)}/utils/LogUtil.java" /> 
+
+    <instantiate from="root/src/app_package/utils/SharedPreferencesUtil.java.ftl"
+               to="${escapeXmlAttribute(srcOut)}/utils/SharedPreferencesUtil.java" /> 
+
 	<instantiate from="root/src/app_package/SimpleActivity.java.ftl"
                    to="${escapeXmlAttribute(srcOut)}/${slashedPackageName(moduleName)}/view/${activityClass}.java" />
 
@@ -118,6 +130,9 @@
 
 	<dependency mavenUrl="com.squareup.okhttp3:okhttp:3.4.1"/>
 	<dependency mavenUrl="com.squareup.okhttp3:logging-interceptor:3.4.1"/>
+
+  <dependency mavenUrl="com.trello:rxlifecycle:1.0"/>
+  <dependency mavenUrl="com.trello:rxlifecycle-components:1.0"/>
 </#if>
 
 <#if butterknife>

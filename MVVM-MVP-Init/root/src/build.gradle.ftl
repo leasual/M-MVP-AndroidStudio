@@ -3,6 +3,10 @@ android {
 	dataBinding {
         enabled = true
     }
+
+    configurations.all {
+        resolutionStrategy.force 'com.google.code.findbugs:jsr305:1.3.9'
+    }
 }
 
 dependencies {

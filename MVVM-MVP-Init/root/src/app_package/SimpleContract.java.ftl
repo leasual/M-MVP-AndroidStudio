@@ -11,9 +11,5 @@ public interface ${contractClass} {
 
     abstract class Presenter extends BasePresenter<View> {
 
-        @Override
-        public void onAttached() {
-
-        }
     }
 }

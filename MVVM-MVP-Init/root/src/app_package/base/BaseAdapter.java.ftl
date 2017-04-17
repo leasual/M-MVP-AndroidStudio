@@ -1,6 +1,7 @@
 package ${packageName}.base;
 
 import android.databinding.DataBindingUtil;
+import android.support.annotation.ArrayRes;
 import android.support.annotation.LayoutRes;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;

@@ -5,10 +5,10 @@ import android.databinding.ViewDataBinding;
 import android.os.Bundle;
 import android.support.annotation.LayoutRes;
 import android.support.annotation.Nullable;
-import android.support.v7.app.AppCompatActivity;
+import com.trello.rxlifecycle.components.support.RxAppCompatActivity;
 
 
-public abstract class DataBindingActivity<T extends ViewDataBinding> extends AppCompatActivity {
+public abstract class DataBindingActivity<T extends ViewDataBinding> extends RxAppCompatActivity {
 
     public T mDataBinding;
 
